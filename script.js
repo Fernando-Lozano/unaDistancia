@@ -17,6 +17,7 @@ const ratio = days / constant;
 progressBar.style.width = width * ratio + "px";
 
 const interval = setInterval(function() {
+  startDate = new Date();
   let seconds = Math.round((endDate - startDate) / 1000);
   let minutes = Math.round(seconds / 60);
   let hours = Math.round(minutes / 60);
@@ -26,6 +27,4 @@ const interval = setInterval(function() {
   minutesDis.textContent = minutes;
   hoursDis.textContent = hours;
   daysDis.textContent = days;
-
-  startDate = new Date();
 }, 1000);
